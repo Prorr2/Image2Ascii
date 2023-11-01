@@ -15,6 +15,8 @@ if option in aceptableOptionList:
 image = cv.imread(filedialog.askopenfilename(filetypes=[("Image", [".png", ".jpeg", ".jpg"])]))
 if option in aceptableOptionList:
      image_rgb=cv.cvtColor(cv.resize(image, (px, px)), cv.COLOR_BGR2RGB) 
+else:
+    image_rgb=cv.cvtColor(image, cv.COLOR_BGR2RGB) 
 ascii_image = [['X' for _ in range(len(image_rgb))] for _ in range(len(image_rgb))]
 print("-----------------------------------------------------------------------")
 print("Analazing Photo")
